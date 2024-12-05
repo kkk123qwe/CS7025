@@ -40,9 +40,11 @@
 .navbar-brand {
   font-size: 25px;
 }
+
 .nav-link {
   color: #7e7e7e;
 }
+
 .navbar li a:hover {
   color: #1abc9c !important;
 }
@@ -109,21 +111,128 @@ button {
 
 .sec-I {
   background-color: #d0eeec;
+  display: flex;
+  position: relative;
+  max-width: 2200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 764px) {
+/* Section I */
+@media (max-width: 768px) {
   .sec-I {
-    max-width: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .text-section h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .text-section p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .email {
+    font-size: 1rem;
   }
 }
 
+/* Section II (Work) */
+@media (max-width: 768px) {
+  .sec-II {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .content-block {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .text-block {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .sec-description {
+    font-size: 1rem;
+  }
+
+  .image {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Section III (About) */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links ul {
+    margin: 10px 0;
+  }
+}
+
+/* Contact Section */
+@media (max-width: 768px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .text-area {
+    padding-top: 20px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
 .intro-section {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+
+
   padding-bottom: 150px;
   padding-left: 150px;
   padding-right: 150px;
@@ -157,52 +266,16 @@ button {
   padding-bottom: 2px;
 }
 
-.reel-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.back-to-top-btn {
+  background-color: #d0eeec;
+  color: #333060;
 }
 
-.avatar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 220px;
-  height: 220px;
-}
-
-.reel-image {
-  margin-top: 60px;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-@media (max-width: 992px) {
-  .intro-section {
-    max-width: none;
-    margin: 0;
-    padding: 0px;
-  }
-  .container {
-    padding: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .intro-section {
-    max-width: none;
-    margin: 0;
-    padding: 0px;
-  }
-}
-
-/* .............sec-II work......................... */
+/* .............................sec-II work......................... */
 
 .sec-II {
   max-width: none;
+  max-width: 2200px;
   box-sizing: border-box;
   background: linear-gradient(#333060, #d0eeec);
   margin: 0;
@@ -212,15 +285,27 @@ button {
   align-items: center;
 }
 
+@media (min-width: 993px) {
+  .sec-II {
+    max-width: none;
+  }
+}
+
+@media (max-width: 794px) {
+  .sec-II {
+    display: inline-block;
+  }
+}
+
 .main-container {
-  display: flex;
+
   flex-direction: column;
   align-items: center;
   padding: 80px 20px;
   max-width: 1000px;
 }
 
-/* Each content block contains both text and image */
+
 .content-block {
   display: flex;
   justify-content: space-between;
@@ -269,47 +354,36 @@ button {
   transform: scale(1.05);
 }
 
-/* CTA Button */
-.cta-button {
-  background-color: #000;
-  color: #fff;
-  padding: 15px 30px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #444;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .main-container {
     padding: 0;
   }
+
   .content-block {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .title {
     font-size: 4rem;
   }
+
   .image {
     width: 100%;
     max-width: 350px;
   }
 }
 
-/* .............sec-III about......................... */
+/* ............................sec-III about......................... */
 
 .sec-III {
   font-family: "Poppins", sans-serif;
   background-color: #d0eeec;
   color: white;
+  max-width: 2200px;
   padding-top: 20px;
 }
 
@@ -321,7 +395,7 @@ button {
   line-height: 1.6;
 }
 
-/* Small heading style */
+
 .small-heading {
   font-size: 0.9rem;
   color: #888888;
@@ -360,80 +434,7 @@ button {
   }
 }
 
-/* .................part-II ani........................ */
-
-/* .ani {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  color: #ffd36d;
-  background-color: #333060;
-}
-
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
-  padding-top: 100px;
-  padding-bottom: 200px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.article-item {
-  
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.article-item img {
-  width: 100%;
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-}
-
-.article-info {
-  padding: 20px;
-}
-
-.article-info .date {
-  font-size: 14px;
-  color: #ebebeb;
-}
-
-.article-info h3 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.article-info .description {
-  font-size: 14px;
-  color: #ebebeb;
-  line-height: 1.5;
-}*/
-
-/* Adjusting rotations */
-/* .article-item:nth-child(1) {
-  transform: rotate(-3deg);
-}
-
-.article-item:nth-child(2) {
-  transform: rotate(-3deg);
-}
-
-.article-item:nth-child(3) {
-  transform: rotate(-3deg);
-}
-
-.article-item:nth-child(4) {
-  transform: rotate(-3deg);
-} */
-
-/* ......................game............................ */
+/* .................................game................................... */
 
 .sec-game {
   margin: 0;
@@ -553,7 +554,7 @@ button {
   color: #333060;
 }
 
-/* ................about....................... */
+/* ..................................about......................................... */
 
 .sec-about {
   background-color: #d0eeec;
@@ -618,7 +619,7 @@ button {
   max-width: 60px;
 }
 
-/* ...............contact................. */
+/* ................................contact...................................... */
 
 .contact {
   background-color: #333060;
@@ -667,4 +668,158 @@ button {
 
 .icon:hover i {
   color: black;
+}
+
+/* 表单 */
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* ................................ani...................................... */
+
+/* Carousel Section */
+#carousel-section {
+  text-align: center;
+  margin: 0;
+  background-color: #d0eeec;
+  padding: 20px 0;
+  color: #ffffff;
+}
+
+#carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.carousel-controls button {
+  padding: 10px 20px;
+  background-color: #333060;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-controls button:hover {
+  background-color: #555090;
+}
+
+/* .........................code............................. */
+
+/* General Blog Container Styling */
+#blog-container {
+  max-width: 800px;
+  margin: 40px auto;
+  /* Center the container */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  /* Light background for readability */
+  border: 1px solid #ddd;
+  /* Subtle border for separation */
+  border-radius: 8px;
+  /* Smooth corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Add depth */
+}
+
+/* Individual Blog Post Styling */
+.blog-post {
+  margin-bottom: 30px;
+  /* Space between posts */
+  padding: 20px;
+  background-color: #ffffff;
+  /* White background for each post */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Light shadow */
+}
+
+/* Post Title */
+.blog-post h2 {
+  font-size: 24px;
+  color: #333;
+  /* Darker color for readability */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Post Metadata */
+.blog-post p strong {
+  font-size: 14px;
+  color: #555;
+  /* Subtle color for metadata */
+}
+
+.blog-post p {
+  margin: 8px 0;
+  color: #666;
+  /* Subtle gray color for regular text */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #blog-container {
+    padding: 15px;
+  }
+
+  .blog-post {
+    padding: 15px;
+  }
+
+  .blog-post h2 {
+    font-size: 20px;
+  }
 }

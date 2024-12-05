@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../lab cookie"
+		},
+		{
+			"path": "../lab function"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "lab cookie"
+	}
+}
