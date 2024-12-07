@@ -1,0 +1,46 @@
+<%- include("partials/header1") -%>
+
+<div class="sec-II">
+  <div class="main-container">
+    <!-- Second section: Pixel Craft -->
+
+    <div class="content-block">
+      <div class="text-block">
+        <h1 class="title">
+          ANIMATION <br />
+          CRAFT
+        </h1>
+        <p class="sec-description">
+          Innovative design creating digital experiences that transcend catoon.
+        </p>
+      </div>
+      <div class="image-block">
+        <a href="/ani">
+          <img src="2.png" alt="Pixel Craft Image" class="image"
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Carousel Section -->
+<div class="sec-I">
+  <div id="carousel-container">
+    <% images.forEach((image, index) => { %>
+    <img
+      src="<%= image.src %>"
+      alt="<%= image.alt %>"
+      class="carousel-image"
+      style="<%= index === 0 ? '' : 'display:none;' %>"
+    />
+    <% }); %>
+  </div>
+
+  <div class="carousel-controls">
+    <button id="prev-slide">Previous</button>
+    <button id="next-slide">Next</button>
+  </div>
+  <script type="module" src="main.js"></script>
+
+  <%- include("partials/footer") -%>
+</div>

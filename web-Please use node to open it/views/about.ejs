@@ -1,0 +1,25 @@
+<%- include("partials/header") -%> <%- include("partials/part-about") -%>
+
+<div class="sec-about">
+  <div class="about">
+    <!-- Left Section -->
+    <div class="left-section">
+      <h2>Job<br />History</h2>
+      <p>adipiscing elit mattis faucibus odio feugiat.</p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <% jobs.forEach(job => { %>
+      <div class="job-item">
+        <div class="job-details">
+          <h3><%= job.title %></h3>
+          <p><%= job.description %></p>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") -%>
